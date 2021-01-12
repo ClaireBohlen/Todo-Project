@@ -7,7 +7,9 @@ const todoList = document.querySelector('.todo-list');
 //Event Listeners
 
 todoButton.addEventListener('click', addTodo);
+//Trash Buttin
 todoList.addEventListener('click', deleteCheck);
+//Check Mark 
 
 
 //Functions
@@ -43,13 +45,20 @@ function deleteCheck(e){
     console.log(e.target);
     const item = e.target;
     if(item.classList[0] === 'trash-btn'){
-        item.remove();
-        console.log(item)
+        const todo = item.parentElement;
+        todo.classList.add('fall');
+        todo.addEventListener('transitionend', function(){
+            todo.remove();
+        })
+        
+        
+        
     }
-    // const item = e.target;
-    // if (item.classLisr[0]==='trash-btn'){
-    //     item.remove;
-    // }
+    if(item.classList[0] === 'complete-btn'){
+        const todo = item.parentElement;
+        todo.classList.toggle('completed');
+    }
+   
 
 
 }
