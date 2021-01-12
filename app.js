@@ -7,7 +7,7 @@ const todoList = document.querySelector('.todo-list');
 //Event Listeners
 
 todoButton.addEventListener('click', addTodo);
-todoLisr.addEventListener('click', deleteCheck);
+todoList.addEventListener('click', deleteCheck);
 
 
 //Functions
@@ -40,10 +40,16 @@ function addTodo(event){
 }
 
 function deleteCheck(e){
+    console.log(e.target);
     const item = e.target;
-    if (item.classLisr[0]==='trash-btn'){
-        item.remove;
+    if(item.classList[0] === 'trash-btn'){
+        item.remove();
+        console.log(item)
     }
+    // const item = e.target;
+    // if (item.classLisr[0]==='trash-btn'){
+    //     item.remove;
+    // }
 
 
 }
