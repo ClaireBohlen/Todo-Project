@@ -16,5 +16,9 @@
 
 //Functions
 
+//Gets the input and adds to the list
+
+//
+
 
 
