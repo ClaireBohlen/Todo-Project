@@ -1,4 +1,5 @@
 //Dom Variables
+///////////////
 //Todo Input
 const todoInput = document.querySelector('.todo-input');
 
@@ -13,8 +14,11 @@ const filterOption = document.querySelector('.filter-todos');
 
 
 //Event Listeners
+/////////////////
+//Listening for click event on submit button & add the todo
+todoButton.addEventListener('click', addTodo);
 
-//Todo Input Button
+
 //Todo List Delete & Completed Buttons
 //Dropdown Selector
 
@@ -22,6 +26,14 @@ const filterOption = document.querySelector('.filter-todos');
 //Functions
 
 //Gets the input and adds to the list
+function addTodo(event){
+    event.preventDefault(); //Page load
+
+    //Dynamicallly create the todo list
+    
+
+
+}
 
 //
 
