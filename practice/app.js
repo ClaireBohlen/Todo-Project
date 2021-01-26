@@ -1,9 +1,14 @@
 //Dom Variables
-
 //Todo Input
-//Input Icon
-//Div Container & UL
+const todoInput = document.querySelector('.todo-input');
+
+//Input Button
+const todoButton = document.querySelector('.todo-button');
+//UL
+const todoList = document.querySelector('.todo-list');
+
 //Filter Dropdown
+const filterOption = document.querySelector('.filter-todos');
 
 
 
