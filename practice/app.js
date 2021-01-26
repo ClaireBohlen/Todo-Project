@@ -50,6 +50,19 @@ function addTodo(event){
     //make this button a child el of todoDiv
     todoDiv.appendChild(completedButton);
 
+    //Dynamically create trash button
+    const trashButton = document.createElement('button');
+    trashButton.innerText = '<i class="fas fa-trash"></i>';
+    trashButton.classList.add('trash-btn');
+    todoDiv.appendChild(trashButton);
+
+
+    //Making the todoDiv a child el of html todoList
+    todoList.appendChild(todoDiv);
+
+    //Clear the input value after the input has been added to the LI
+    todoInput.value = '';
+
 
 
 
