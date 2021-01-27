@@ -71,7 +71,17 @@ function addTodo(event){
 //Function that checks if completed or trash can was clicked 
 function deleteCheck(e){
     console.log(e.target);//logs clicked el
-    
+    const item = e.target;
+
+    //Running functionality based on its class and index position of that class
+    if(item.classList[0] === 'trash-btn'){
+        //Grabbing the parent so we can add a class to make the  whole el dissapear
+        const todo = item.parentElement;
+        
+
+    }
+
+
 
 }
 
