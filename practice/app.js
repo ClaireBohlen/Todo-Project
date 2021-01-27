@@ -17,6 +17,8 @@ const filterOption = document.querySelector('.filter-todos');
 /////////////////
 //Listening for click event on submit button & add the todo
 todoButton.addEventListener('click', addTodo);
+//Listening on parent el then checked if its completed or trash in the function
+todoList.addEventListener('click', deleteCheck);
 
 
 //Todo List Delete & Completed Buttons
@@ -45,14 +47,14 @@ function addTodo(event){
 
     //Dynamically create completed button
     const completedButton = document.createElement('button');
-    completedButton.innerText = '<i class="fas fa-check"></i>';
+    completedButton.innerText = '$';
     completedButton.classList.add('complete-btn');
     //make this button a child el of todoDiv
     todoDiv.appendChild(completedButton);
 
     //Dynamically create trash button
     const trashButton = document.createElement('button');
-    trashButton.innerText = '<i class="fas fa-trash"></i>';
+    trashButton.innerText = 'X';
     trashButton.classList.add('trash-btn');
     todoDiv.appendChild(trashButton);
 
@@ -63,13 +65,15 @@ function addTodo(event){
     //Clear the input value after the input has been added to the LI
     todoInput.value = '';
 
-
-
-
-
 }
 
-//
+
+//Function that checks if completed or trash can was clicked 
+function deleteCheck(e){
+    console.log(e.target);//logs clicked el
+    
+
+}
 
 
 
