@@ -77,8 +77,13 @@ function deleteCheck(e){
     if(item.classList[0] === 'trash-btn'){
         //Grabbing the parent so we can add a class to make the  whole el dissapear
         const todo = item.parentElement;
-        
+        todo.classList.add('fall');
+        //ADD LOCAL STORAGE DELETE
 
+
+    }
+    if(item.classList[0] === 'complete-btn'){
+        const todo = item.parentElement;
     }
 
 
