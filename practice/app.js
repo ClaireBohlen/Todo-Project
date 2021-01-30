@@ -19,6 +19,8 @@ const filterOption = document.querySelector('.filter-todos');
 todoButton.addEventListener('click', addTodo);
 //Listening on parent el then checked if its completed or trash in the function
 todoList.addEventListener('click', deleteCheck);
+//Adding event listener on the dropdown menu selection
+filterOption.addEventListener('change', filterTodo);
 
 
 //Todo List Delete & Completed Buttons
