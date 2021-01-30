@@ -96,7 +96,19 @@ function deleteCheck(e){
 //Dropdown Filter Todo Function
 
 function filterTodo(e){
-    
+    //grabbing the list items through parent Todo List
+    const todos = todoList.childNodes;
+    //Looping though child els 
+    todos.forEach(function(todo){
+        //Running functionality based on each case
+        switch(e.target.value){
+            case "all":
+                //Just displaying all the todos
+                todo.style.display = "flex";
+                //adding break so the function stops
+                
+        }
+    })
 }
 
 
