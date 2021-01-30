@@ -82,6 +82,7 @@ function deleteCheck(e){
 
 
     }
+    //Checking the class and adding a CSS class for when it matches
     if(item.classList[0] === 'complete-btn'){
         const todo = item.parentElement;
         todo.classList.toggle('completed');
