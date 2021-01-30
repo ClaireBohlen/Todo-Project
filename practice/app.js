@@ -84,12 +84,19 @@ function deleteCheck(e){
     }
     //Checking the class and adding a CSS class for when it matches
     if(item.classList[0] === 'complete-btn'){
+         //Grabbing the parent so we can add a class to make a line go though completed item
         const todo = item.parentElement;
         todo.classList.toggle('completed');
     }
 
 
 
+}
+
+//Dropdown Filter Todo Function
+
+function filterTodo(e){
+    
 }
 
 
