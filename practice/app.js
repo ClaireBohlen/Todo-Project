@@ -106,7 +106,28 @@ function filterTodo(e){
                 //Just displaying all the todos
                 todo.style.display = "flex";
                 //adding break so the function stops
-                
+            break;
+            case "completed":
+            //Only display the todos with classlist of completed
+            if(todo.classList.contains('completed')){
+                todo.style.display = "flex";
+            } else {
+                //Otherwise do not display
+                todo.style.display = "none";
+            }
+            break;
+            case "uncompleted":
+                //If class does NOT contain completed
+                if(!todo.classList.contains('completed')){
+                    //Display
+                    todo.style.display = "flex";
+                } else{
+                    //Otherwise display none 
+                    todo.style.display = "none";
+                }
+                break;
+
+
         }
     })
 }
