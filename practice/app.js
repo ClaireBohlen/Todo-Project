@@ -162,7 +162,23 @@ function getTodos(){
         newTodo.innerText = todo;
         newTodo.classList.add('todo-item');
         todoDiv.appendChild(newTodo);
-        
+
+        const completedButton = document.createElement('button');
+        completedButton.innerText = '$';
+        completedButton.classList.add('complete-btn');
+        //make this button a child el of todoDiv
+        todoDiv.appendChild(completedButton);
+
+        //Dynamically create trash button
+        const trashButton = document.createElement('button');
+        trashButton.innerText = 'X';
+        trashButton.classList.add('trash-btn');
+        todoDiv.appendChild(trashButton);
+
+
+        //Making the todoDiv a child el of html todoList
+        todoList.appendChild(todoDiv);
+
     })
 }
 
