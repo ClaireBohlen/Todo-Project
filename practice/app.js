@@ -147,5 +147,24 @@ function saveLocalTodos(todo){
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
+function getTodos(){
+    let todos;
+    if(localStorage.getItem('todos') === null){
+        todos = [];
+    } else{
+        todos = JSON.parse(localStorage.getItem('todos'));
+    }
+    todos.forEach(function(todo){
+        const todoDiv = document.createElement('div');
+        todoDiv.classList.add('todo');
+
+        const newTodo = document.createElement('li');
+        newTodo.innerText = todo;
+        newTodo.classList.add('todo-item');
+        todoDiv.appendChild(newTodo);
+        
+    })
+}
+
 
 
