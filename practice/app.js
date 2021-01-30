@@ -15,6 +15,8 @@ const filterOption = document.querySelector('.filter-todos');
 
 //Event Listeners
 /////////////////
+//On Page load grab local todos if any are in storage
+document.addEventListener('DOMContentLoaded', getTodos);
 //Listening for click event on submit button & add the todo
 todoButton.addEventListener('click', addTodo);
 //Listening on parent el then checked if its completed or trash in the function
