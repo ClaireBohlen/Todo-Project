@@ -140,17 +140,22 @@ function filterTodo(e){
 
 function saveLocalTodos(todo){
     let todos;
+    //Always check local storage and set array to empty if nothing is located in local storage
     if(localStorage.getItem('todos') === null){
         todos = [];
     } else {
         todos = JSON.parse(localStorage.getItem('todos'));
+        //If we do have storage we need to parse the object and store it in the todos variable
     }
     todos.push(todo);
+    //Push the todo into the todos
     localStorage.setItem('todos', JSON.stringify(todos));
+    //To save we need to stringify the array to save to local storage
 }
 
 function getTodos(){
     let todos;
+    //Always check local storage and set array to empty if nothing is located in local storage
     if(localStorage.getItem('todos') === null){
         todos = [];
     } else{
