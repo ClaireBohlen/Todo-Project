@@ -81,8 +81,12 @@ function deleteCheck(e){
     if(item.classList[0] === 'trash-btn'){
         //Grabbing the parent so we can add a class to make the  whole el dissapear
         const todo = item.parentElement;
+        //LOCAL STORAGE DELETE
+        removeLocalTodos(todo);
         todo.classList.add('fall');
-        //ADD LOCAL STORAGE DELETE
+        //Remove from visual
+        todo.remove();
+
 
 
     }
@@ -153,6 +157,7 @@ function saveLocalTodos(todo){
     //To save we need to stringify the array to save to local storage
 }
 
+//On page load we will get the todos from local storage 
 function getTodos(){
     let todos;
     //Always check local storage and set array to empty if nothing is located in local storage
@@ -160,6 +165,7 @@ function getTodos(){
         todos = [];
     } else{
         todos = JSON.parse(localStorage.getItem('todos'));
+        //If we do have storage we need to parse the object and store it in the todos variable
     }
     todos.forEach(function(todo){
         const todoDiv = document.createElement('div');
