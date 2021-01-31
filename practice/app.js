@@ -47,7 +47,8 @@ function addTodo(event){
     //make the todo a child el of todoDiv
     todoDiv.appendChild(newTodo);
 
-    //ADD LOCAL STORAGE HERE LATER
+    //ADD LOCAL STORAGE HERE 
+    saveLocalTodos(todoInput.value);
 
     //Dynamically create completed button
     const completedButton = document.createElement('button');
@@ -81,11 +82,13 @@ function deleteCheck(e){
     if(item.classList[0] === 'trash-btn'){
         //Grabbing the parent so we can add a class to make the  whole el dissapear
         const todo = item.parentElement;
-        //LOCAL STORAGE DELETE
-        removeLocalTodos(todo);
-        todo.classList.add('fall');
-        //Remove from visual
-        todo.remove();
+       todo.classList.add('fall');
+         //LOCAL STORAGE DELETE
+         removeLocalTodos(todo);
+         todo.addEventListener('transitioned', function(){
+             todo.remove();
+         })
+       
 
 
 
